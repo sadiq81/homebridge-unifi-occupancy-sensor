@@ -52,7 +52,19 @@
         "items": {
           "title": "Device MAC Address",
           "type": "string",
-          "pattern": "^([a-f0-9]{2}:){5}[a-f0-9]{2}$"
+          "properties": {
+            "device": {
+              "title": "Device MAC Address",
+              "type": "string",
+              "pattern": "^([a-f0-9]{2}:){5}[a-f0-9]{2}$",
+              "required": true
+            },
+            "person": {
+              "title": "Person name",
+              "type": "string",
+              "required": true
+            }
+          }
         }
       },
       "monitor": {
@@ -72,6 +84,11 @@
               "title": "AP MAC Address",
               "type": "string",
               "pattern": "^([a-f0-9]{2}:){5}[a-f0-9]{2}$"
+            },
+            "person": {
+              "title": "Person name",
+              "type": "string",
+              "required": true
             }
           }
         }
